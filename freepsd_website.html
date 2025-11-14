@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreePSD — Premium PSD Marketplace</title>
+  <style>
+    :root {
+      --bg: #0a0a0d;
+      --surface: #111114;
+      --muted: #8f9aa3;
+      --accent: #00e0ff;
+      --accent2: #6a5bff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 13, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #18181c;
+      z-index: 50;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 20px auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .button-group {
+      margin-top: 30px;
+    }
+    .btn {
+      padding: 12px 20px;
+      background: var(--accent);
+      border-radius: 10px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 700;
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+    }
+
+    /* Categories */
+    .categories {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .cat-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    .cat {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #17171b;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .cat:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Products */
+    .products {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: var(--surface);
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid #1b1b21;
+      transition: 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    .thumb {
+      height: 150px;
+      background: linear-gradient(135deg, #16161c, #0c0c0f);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .p-title { font-weight: 700; margin-top: 12px; }
+    .p-cat { font-size: 13px; color: var(--muted); }
+    .price { margin-top: 14px; font-size: 20px; font-weight: 800; }
+
+    .buy-btn {
+      width: 100%;
+      padding: 10px;
+      background: var(--accent);
+      border-radius: 10px;
+      color: #000;
+      font-weight: 700;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+    .free-btn {
+      width: 100%;
+      padding: 10px;
+      background: transparent;
+      border: 2px solid var(--accent);
+      border-radius: 10px;
+      color: var(--accent);
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid #1b1b21;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">FreePSD</div>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Categories</a>
+    <a href="#">Products</a>
+    <a href="#">Cart</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>FreePSD — Premium Editable PSD Templates</h1>
+  <p>Download or Purchase high‑quality PSD files for thumbnails, posters, logos, banners, UI kits, and much more.</p>
+  <div class="button-group">
+    <a class="btn" href="#products">Explore Products</a>
+    <a class="btn btn-outline" href="#">Sell Your PSD</a>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="cat-title">Browse Categories</div>
+  <div class="cat-grid">
+    <div class="cat">Thumbnails</div>
+    <div class="cat">Posters</div>
+    <div class="cat">Logos</div>
+    <div class="cat">Banners</div>
+    <div class="cat">UI Kits</div>
+    <div class="cat">Social Media</div>
+    <div class="cat">Flyers</div>
+    <div class="cat">Album Covers</div>
+    <div class="cat">Photo Manipulation</div>
+    <div class="cat">Business Cards</div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="cat-title">Featured PSD Templates</div>
+  <div class="product-grid">
+
+    <div class="product">
+      <div class="thumb">Thumbnail Pack</div>
+      <div class="p-title">YouTube Thumbnail PSD</div>
+      <div class="p-cat">Category: Thumbnails</div>
+      <div class="price">₹99</div>
+      <button class="buy-btn">Buy Now</button>
+      <button class="free-btn">Free Download</button>
+    </div>
+
+    <div class="product">
+      <div class="thumb">Poster PSD</div>
+      <div class="p-title">Event Poster Template</div>
+      <div class="p-cat">Category: Posters</div>
+      <div class="price">₹149</div>
+      <button class="buy-btn">Buy Now</button>
+      <button class="free-btn">Free Download</button>
+    </div>
+
+    <div class="product">
+      <div class="thumb">Logo Mockup</div>
+      <div class="p-title">Minimal Logo PSD</div>
+      <div class="p-cat">Category: Logos</div>
+      <div class="price">₹59</div>
+      <button class="buy-btn">Buy Now</button>
+      <button class="free-btn">Free Download</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 FreePSD — Designed for creators. Payments & downloads can be integrated easily.
+</footer>
+
+</body>
+</html>
